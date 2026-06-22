@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="korro-studio.png" alt="KORRO Design Studio" width="800">
+  <img src="korrodesign.png" alt="KORRO Design Studio" width="800">
 </p>
 
 <p align="center">
@@ -35,14 +35,14 @@ Works standalone. Put the skill file in Claude Code and start designing. No API 
 ## Quick Start
 
 ```bash
-# 1. Install the skill
-git clone https://github.com/korro/korro-studio.git
-cp -r korro-studio/korrodesign ~/.claude/skills/korrodesign
+# 1. Clone and install the skill
+git clone https://github.com/KorroAi/korrodesign.git
+cp korrodesign/SKILL.md ~/.claude/skills/korrodesign/SKILL.md
 
 # 2. Reload Claude Code
 /claude reload
 
-# 3. Start your design session
+# 3. Start designing
 /korrodesign
 ```
 
@@ -51,8 +51,8 @@ Claude becomes your Creative Director. The skill guides you through 7 phases —
 **Optional: install the ESLint plugin for post-generation checks:**
 
 ```bash
-cp korro-studio/eslint-plugin-korro-design.js your-project/
-cp korro-studio/eslint.config.korro.js your-project/
+cp korrodesign/korro-studio/eslint-plugin-korro-design.js your-project/
+cp korrodesign/korro-studio/eslint.config.korro.js your-project/
 cd your-project
 npx eslint . --config eslint.config.korro.js
 ```
@@ -131,18 +131,18 @@ That's it. `/korrodesign` now works in Claude Code. The Taste Guardian activates
 
 ```bash
 # Clone the repo
-git clone https://github.com/korro/korro-studio.git
-cd korro-studio
+git clone https://github.com/KorroAi/korrodesign.git
+cd korrodesign
 
 # Skill
-cp -r korrodesign ~/.claude/skills/korrodesign
+cp SKILL.md ~/.claude/skills/korrodesign/SKILL.md
 
 # ESLint Plugin (copy to any project)
-cp korrodesign/korro-studio/eslint-plugin-korro-design.js my-project/
-cp korrodesign/korro-studio/eslint.config.korro.js my-project/
+cp korro-studio/eslint-plugin-korro-design.js my-project/
+cp korro-studio/eslint.config.korro.js my-project/
 
 # Or scaffold a fresh Next.js project with everything pre-configured
-node korrodesign/korro-studio/scaffold.js my-new-project
+node korro-studio/scaffold.js my-new-project
 ```
 
 ### Optional: OpenRouter Backend
@@ -251,7 +251,7 @@ The SKILL.md enforces these during generation. Claude will not produce code that
 ## Automation Tools
 
 ```
-korro-studio/
+korrodesign/
 ├── scaffold.js                    Init Next.js 15 + Tailwind v4 + fonts + Lenis + Grain + ESLint
 ├── generate.js                    OpenRouter pipeline (GLM 5.2 → Kimi K2.7 → quality check → build)
 ├── quality-check.js               Cross-file structural checks (config, grain, slop phrases)
@@ -344,8 +344,8 @@ Korrodesign v3 absorbed six design philosophies into a single skill:
 ## Contributing
 
 ```bash
-git clone https://github.com/korro/korro-studio.git
-cd korro-studio
+git clone https://github.com/KorroAi/korrodesign.git
+cd korrodesign
 ```
 
 To add a new ESLint rule:

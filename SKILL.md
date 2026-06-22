@@ -4,7 +4,7 @@ description: Design Copilot — two enforcement layers (Taste Guardian + Blind S
 version: 3.0.0
 author: KORRO
 license: MIT
-repository: https://github.com/korro/korro-studio
+repository: https://github.com/KorroAi/korrodesign
 ---
 
 # KORRO DESIGN STUDIO v3 — Design Copilot
@@ -166,13 +166,13 @@ Save the complete prompt to `BRIEF_CURRENT.md` in the skill directory.
 
 ### Step 2: Scaffold
 ```
-node korro-studio/scaffold.js <project-dir>
+node korrodesign/scaffold.js <project-dir>
 ```
 Creates Next.js 15 + Tailwind v4 + TypeScript project with fonts, palette, grain overlay pre-configured.
 
 ### Step 3: Generate
 ```
-node korro-studio/generate.js --prompt-file BRIEF_CURRENT.md --output-dir <project-dir>
+node korrodesign/generate.js --prompt-file BRIEF_CURRENT.md --output-dir <project-dir>
 ```
 Pipeline: GLM 5.2 → architecture/design spec → Kimi K2.7 → code generation → Quality check → npm install → next dev.
 
@@ -185,7 +185,7 @@ Live at `http://localhost:3100`. Offer deploy: `npx vercel --prod`.
 
 ### Step 0: Setup (one-time)
 ```bash
-cp korro-studio/eslint-plugin-korro-design.js ./
+cp korrodesign/eslint-plugin-korro-design.js ./
 # Then create eslint.config.korro.js — scaffold.js does this automatically
 ```
 
@@ -466,9 +466,9 @@ For one-click generation, add `OPENROUTER_API_KEY` to `.env`. The skill works fu
 
 Commands:
 ```
-node korro-studio/scaffold.js <project-dir>
-node korro-studio/generate.js --prompt-file <path> --output-dir <dir>
-node korro-studio/quality-check.js <project-dir>
+node korrodesign/scaffold.js <project-dir>
+node korrodesign/generate.js --prompt-file <path> --output-dir <dir>
+node korrodesign/quality-check.js <project-dir>
 npx eslint . --config eslint.config.korro.js          # Blind Spot audit
 npx eslint . --config eslint.config.korro.js --fix    # Auto-fix violations
 ```
