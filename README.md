@@ -6,6 +6,10 @@
 </p>
 
 <p align="center">
+  <img src="korro-studio.png" alt="KORRO Design Studio" width="800">
+</p>
+
+<p align="center">
   <a href="#quick-start">Quick Start</a> ·
   <a href="#how-it-works">How It Works</a> ·
   <a href="#the-7-phases">7 Phases</a> ·
