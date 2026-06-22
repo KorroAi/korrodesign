@@ -113,19 +113,22 @@
   .hero p.subtitle { font-size: 1.1rem; line-height: 1.7; }
   .hero-actions { display: flex; gap: 0.875rem; margin-top: 2.5rem; }
   .hero-visual { position: relative; width: 100%; aspect-ratio: 1; }
-  #three-canvas { position: absolute; inset: 0; border-radius: 2rem; overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 24px 48px -12px rgba(0,0,0,0.5); }
+  #three-canvas {
+    position: absolute; inset: 0; border-radius: 2rem; overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 24px 48px -12px rgba(0,0,0,0.5);
+    background: radial-gradient(ellipse at center, rgba(5,150,105,0.08) 0%, transparent 60%);
+  }
 
   /* Metrics - dense cockpit */
   .metrics { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .metric { padding: 3.5rem 0; }
+  .metric { padding: 3.5rem 1rem; text-align: center; }
   .metric + .metric { border-left: 1px solid var(--border); }
-  .metric-value { font-family: 'Cabinet Grotesk', system-ui, sans-serif; font-size: 2.75rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.04em; }
+  .metric-value { font-family: 'Cabinet Grotesk', system-ui, sans-serif; font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.04em; }
   .metric-label { font-size: 0.8rem; color: var(--ink-faint); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
 
   /* Features - zigzag */
-  .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-  .feature-row.reverse .feature-visual { order: -1; }
+  .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
   .feature-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--emerald); margin-bottom: 0.875rem; }
   .feature-card {
     aspect-ratio: 4/3;
@@ -134,12 +137,14 @@
     box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 16px 32px -8px rgba(0,0,0,0.4);
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
+    padding: 2rem;
   }
   .feature-card::before {
     content: '';
     position: absolute; inset: 0;
     background: radial-gradient(ellipse at 30% 30%, rgba(5,150,105,0.06) 0%, transparent 55%);
   }
+  .feature-card svg { position: relative; z-index: 1; max-width: 100%; max-height: 100%; }
   .feature-card canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 
   /* CTA */
@@ -168,13 +173,18 @@
     .surface-raised:hover { transform: translateY(-2px); }
   }
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 7rem; padding-bottom: 4rem; }
-    .hero-visual { aspect-ratio: 1; max-width: 400px; margin: 0 auto; }
-    .feature-row, .feature-row.reverse { grid-template-columns: 1fr; gap: 3rem; }
-    .feature-row.reverse .feature-visual { order: 0; }
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 7rem; padding-bottom: 3rem; gap: 2rem; }
+    .hero-visual { aspect-ratio: 1; max-width: 340px; margin: 0 auto; }
+    .hero-actions { flex-direction: column; }
+    .feature-row, .feature-row.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
+    .feature-card { aspect-ratio: 1; }
     .metrics-grid { grid-template-columns: 1fr; }
     .metric + .metric { border-left: none; border-top: 1px solid var(--border); }
     nav .links { display: none; }
+    .cta-box { padding: 2rem; border-radius: 1.25rem; }
+    .cta-box h2 { font-size: 1.75rem; }
+    .cta-box div { flex-direction: column; }
+    footer .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -236,7 +246,7 @@
       <p style="margin-top:1rem;">Vector networks that reshape as you drag. Constraints that suggest rather than enforce. Spacing that snaps to the grid — but lets you break it when it matters.</p>
     </div>
     <div class="feature-card">
-      <svg viewBox="0 0 400 300" style="position:relative;z-index:1;width:85%;height:85%">
+      <svg viewBox="0 0 400 300" >
         <defs>
           <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgba(5,150,105,0.4)"/><stop offset="100%" stop-color="rgba(5,150,105,0.05)"/></linearGradient>
         </defs>
@@ -266,7 +276,7 @@
         <circle cx="160" cy="120" r="3" fill="#059669" opacity="0.6"/>
         <rect x="78" y="118" width="4" height="4" fill="#059669" opacity="0.3"/>
         <!-- Dimension label -->
-        <text x="280" y="260" fill="white" opacity="0.2" font-family="Satoshi,system-ui,sans-serif" font-size="10" letter-spacing="0.08em">128<span style="font-family:monospace">px</span></text>
+        <text x="280" y="260" fill="white" opacity="0.2" font-family="Satoshi,system-ui,sans-serif" font-size="10" letter-spacing="0.08em">128px</text>
       </svg>
     </div>
   </div>
@@ -278,7 +288,7 @@
       <p style="margin-top:1rem;">See what your team is building as they build it. No check-in, no refresh, no merge conflicts. Just the work, synchronized at 60fps across continents.</p>
     </div>
     <div class="feature-card">
-      <svg viewBox="0 0 400 300" style="position:relative;z-index:1;width:85%;height:85%">
+      <svg viewBox="0 0 400 300" >
         <!-- Shared canvas surface -->
         <rect x="60" y="40" width="280" height="220" rx="16" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
         <!-- Cursor 1 (emerald) -->
