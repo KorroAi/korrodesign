@@ -174,8 +174,6 @@ The 500+ lines of SKILL.md rules are synthesized from:
 
 ## Demo
 
-*Refresh the page if images do not load (Ctrl+F5).*
-
 ### Before (Typical AI Output)
 
 <p align="center">
