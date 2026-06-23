@@ -1,13 +1,13 @@
 ---
 name: korrodesign
-description: Design Copilot — two enforcement layers (Taste Guardian + Blind Spot ESLint plugin, 14 rules). Works standalone with zero dependencies. 7-phase design pipeline. Produces Awwwards-level websites with automated UI hygiene enforcement.
+description: Design Copilot with two enforcement layers (Taste Guardian + Blind Spot ESLint plugin, 14 rules). Works standalone with zero dependencies. 7-phase design pipeline. Produces Awwwards-level websites with automated UI hygiene enforcement.
 version: 3.0.0
 author: KORRO
 license: MIT
 repository: https://github.com/KorroAi/korrodesign
 ---
 
-# KORRO DESIGN STUDIO v3 — Design Copilot
+# KORRO Design: Design Copilot
 
 **Works standalone. Zero dependencies.** Just install the skill, Claude does the rest. Two enforcement layers no other design skill has. Optional OpenRouter backend for automated one-click generation.
 
@@ -15,7 +15,7 @@ repository: https://github.com/KorroAi/korrodesign
 
 ## HOW IT WORKS (no backend needed)
 
-Korrodesign is a **Claude Code skill** — drop `SKILL.md` into `.claude/skills/korrodesign/` and invoke `/korrodesign`. Claude becomes your Creative Director, guiding you through the 7-phase design process. The entire Taste Guardian runs within Claude. The ESLint plugin (`eslint-plugin-korro-design.js`) and `quality-check.js` are standalone Node scripts for post-generation auditing — no API keys required.
+Korrodesign is a **Claude Code skill** ,  drop `SKILL.md` into `.claude/skills/korrodesign/` and invoke `/korrodesign`. Claude becomes your Creative Director, guiding you through the 7-phase design process. The entire Taste Guardian runs within Claude. The ESLint plugin (`eslint-plugin-korro-design.js`) and `quality-check.js` are standalone Node scripts for post-generation auditing ,  no API keys required.
 
 **What you get without any backend:**
 - Full 7-phase design conversation (Claude asks, you answer, Claude guides)
@@ -29,13 +29,13 @@ Korrodesign is a **Claude Code skill** — drop `SKILL.md` into `.claude/skills/
 
 ---
 
-## DESIGN COPILOT — Two-Layer Architecture
+## DESIGN COPILOT ,  Two-Layer Architecture
 
-### Layer 1: TASTE GUARDIAN (during generation — works in Claude)
-The SKILL.md rules guide Claude DURING code generation. This is the "pair programmer with taste" — catching design mistakes before they're written. Zero dependencies.
+### Layer 1: TASTE GUARDIAN (during generation ,  works in Claude)
+The SKILL.md rules guide Claude DURING code generation. This is the "pair programmer with taste" ,  catching design mistakes before they're written. Zero dependencies.
 
-### Layer 2: BLIND SPOT (post-generation — standalone ESLint plugin)
-`eslint-plugin-korro-design.js` — 14 AST-level rules. Not "is it beautiful" — "is this even maintainable as UI?" No API keys. Just ESLint.
+### Layer 2: BLIND SPOT (post-generation ,  standalone ESLint plugin)
+`eslint-plugin-korro-design.js` ,  14 AST-level rules. Not "is it beautiful" ,  "is this even maintainable as UI?" No API keys. Just ESLint.
 
 Core rules (error): `no-div-as-button`, `require-focus-visible`, `no-pure-black`, `no-generic-fonts`, `no-emoji-in-ui`, `no-h-screen`. Supporting rules (warn): `no-z-index-chaos`, `spacing-grid-4px`, `require-image-outlines`, `prefer-concentric-radii`, `no-hardcoded-magic-numbers`, `no-duplicate-colors`, `require-loading-state`, `no-default-tailwind-colors`.
 
@@ -60,20 +60,20 @@ Add to `.claude/settings.local.json`:
 }
 ```
 
-## PHASE 0 — ASSET GENERATION (before design)
+## PHASE 0 ,  ASSET GENERATION (before design)
 
 Before any design work, ask if the user needs assets generated:
 
-1. **3D Models** — Meshy.ai (image→3D, text→3D, 200 credits free). Best for characters, products, icons.
-2. **Images** — Pollinations.ai (unlimited free, URL-based). `https://pollinations.ai/p/{prompt}?width=1024&height=1024&model=flux&nologo=true`
-3. **Sound Effects** — ElevenLabs SFX API (free tier)
-4. **Voice/TTS** — Edge TTS (unlimited free) or ElevenLabs TTS (quality)
+1. **3D Models** ,  Meshy.ai (image→3D, text→3D, 200 credits free). Best for characters, products, icons.
+2. **Images** ,  Pollinations.ai (unlimited free, URL-based). `https://pollinations.ai/p/{prompt}?width=1024&height=1024&model=flux&nologo=true`
+3. **Sound Effects** ,  ElevenLabs SFX API (free tier)
+4. **Voice/TTS** ,  Edge TTS (unlimited free) or ElevenLabs TTS (quality)
 
 Generate all assets FIRST, then design around them. Don't design with placeholders.
 
 ---
 
-## PHASE 1 — CREATIVE BRIEF
+## PHASE 1 ,  CREATIVE BRIEF
 
 First, detect the project stage. This determines everything:
 
@@ -85,18 +85,18 @@ First, detect the project stage. This determines everything:
 
 Then ask ONE question at a time:
 
-1. **Identity** — "Describe the soul of the project in one sentence."
-2. **Personality** — "Pick 3 words: Luxe · Brutalist · Playful · Editorial · Underground · Sci-Fi · Organic · Minimalist · Maximalist · Retro-futuristic · Artisan · Cyberpunk · Pro · Innovative"
-3. **3D Level** — "Level of immersion? A) Subtle B) Present C) Total"
-4. **Reference** — "Name ONE website, film, game, or album whose aesthetic inspires you."
-5. **Five-Second Filter** — "If someone looks at this for 5 seconds, what must they understand?" (What is it? Who is it for? Why care?)
-6. **Content** — "What sections? Hero / Features / About / Contact / Other?"
+1. **Identity** ,  "Describe the soul of the project in one sentence."
+2. **Personality** ,  "Pick 3 words: Luxe · Brutalist · Playful · Editorial · Underground · Sci-Fi · Organic · Minimalist · Maximalist · Retro-futuristic · Artisan · Cyberpunk · Pro · Innovative"
+3. **3D Level** ,  "Level of immersion? A) Subtle B) Present C) Total"
+4. **Reference** ,  "Name ONE website, film, game, or album whose aesthetic inspires you."
+5. **Five-Second Filter** ,  "If someone looks at this for 5 seconds, what must they understand?" (What is it? Who is it for? Why care?)
+6. **Content** ,  "What sections? Hero / Features / About / Contact / Other?"
 
 Store as `DESIGN_BRIEF`.
 
 ---
 
-## PHASE 2 — CONFIGURATION
+## PHASE 2 ,  CONFIGURATION
 
 Deduce from brief. Present:
 
@@ -128,15 +128,15 @@ Present: "I propose this config. OK or adjust?"
 
 ---
 
-## PHASE 3 — COUNCIL (Design Debate)
+## PHASE 3 ,  COUNCIL (Design Debate)
 
 Present 3 contrasting directions:
 
-### A — SAFE
+### A ,  SAFE
 Clean, established conventions. Effective but not surprising.
-### B — BOLD
+### B ,  BOLD
 Visual rupture, asymmetry, risk-taking. Memorable, polarizing.
-### C — HYBRID
+### C ,  HYBRID
 Solid foundation + creative twists. Accessible yet distinctive.
 
 For each: Concept (1 sentence), Palette (3 hex), Typography (display + body), Signature Animation, Strengths+Weaknesses.
@@ -148,18 +148,18 @@ User picks (or mixes). This becomes `CREATIVE_DIRECTION`.
 
 ---
 
-## PHASE 4 — EXECUTION PLAN
+## PHASE 4 ,  EXECUTION PLAN
 
 3 steps max:
-1. **Foundations** — Structure, routing, palette, typography, global layout
-2. **Signature** — The wow element (3D scene, scroll-driven narrative, distinctive effect)
-3. **Polish** — Micro-interactions, responsive, transitions, QA
+1. **Foundations** ,  Structure, routing, palette, typography, global layout
+2. **Signature** ,  The wow element (3D scene, scroll-driven narrative, distinctive effect)
+3. **Polish** ,  Micro-interactions, responsive, transitions, QA
 
 User validates or adjusts.
 
 ---
 
-## PHASE 5 — GENERATION
+## PHASE 5 ,  GENERATION
 
 ### Step 1: Write Brief
 Save the complete prompt to `BRIEF_CURRENT.md` in the skill directory.
@@ -181,12 +181,12 @@ Live at `http://localhost:3100`. Offer deploy: `npx vercel --prod`.
 
 ---
 
-## PHASE 6 — BLIND SPOT AUDIT
+## PHASE 6 ,  BLIND SPOT AUDIT
 
 ### Step 0: Setup (one-time)
 ```bash
 cp korrodesign/eslint-plugin-korro-design.js ./
-# Then create eslint.config.korro.js — scaffold.js does this automatically
+# Then create eslint.config.korro.js ,  scaffold.js does this automatically
 ```
 
 ### Step 1: Run the linter
@@ -211,7 +211,7 @@ npx eslint . --config eslint.config.korro.js --max-warnings 0
 ## STUDIO RULES
 
 ### STRICTLY FORBIDDEN
-- `-` (hyphen-minus) in text → use "—" (em-dash), "•" (bullet), "→" (arrow)
+- `-` (hyphen-minus) banned in prose: use commas or colons, never dashes of any kind
 - Inter, Arial, Helvetica, system-ui, sans-serif
 - Default Tailwind palette (blue-500, gray-100, etc.)
 - Emoji as icons or decoration
@@ -438,9 +438,9 @@ img { outline: 1px solid rgba(0,0,0,0.1); outline-offset: -1px; }
 ## STAGE-AWARE DESIGN (from YC strategy)
 
 ### Pyramid of Clarity
-1. **Apex** — Sharp, jargon-aligned value prop (hero)
-2. **Expanding context** — Features with visual proof as user scrolls
-3. **Functional depth** — Technical docs, pricing, security (separate pages for mature)
+1. **Apex** ,  Sharp, jargon-aligned value prop (hero)
+2. **Expanding context** ,  Features with visual proof as user scrolls
+3. **Functional depth** ,  Technical docs, pricing, security (separate pages for mature)
 
 ### Stage-Appropriate Design
 - **Pre-launch**: Build mystery. Faded screenshots. Waitlist. Single page buildable in a day.

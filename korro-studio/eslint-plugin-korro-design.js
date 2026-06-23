@@ -1,4 +1,4 @@
-// eslint-plugin-korro-design — Blind Spot: UI structural integrity linter
+// eslint-plugin-korro-design ,  Blind Spot: UI structural integrity linter
 // 14 rules. Use with: npx eslint . --config .eslintrc.korro.js
 // Auto-fix: npx eslint . --config .eslintrc.korro.js --fix
 
@@ -103,7 +103,7 @@ const noGenericFonts = {
 const noEmojiInUi = {
   meta: {
     type: "problem",
-    docs: { description: "Disallow emoji in JSX — use Phosphor/Radix icons" },
+    docs: { description: "Disallow emoji in JSX ,  use Phosphor/Radix icons" },
     messages: { emoji: "Emoji '{{emoji}}' in UI. Use Phosphor or Radix icons instead." },
   },
   create(ctx) {
@@ -203,7 +203,7 @@ const preferConcentricRadii = {
         const cn = node.openingElement.attributes.find(a => a.name?.name === "className")?.value?.value || "";
         const hasRadius = /\brounded(?:-\w+|\[[\d.]+rem\])/.test(cn);
         if (!hasRadius) return;
-        // Check if children also have rounded elements — flag if both have radii
+        // Check if children also have rounded elements ,  flag if both have radii
         const children = node.children.filter(c => c.type === "JSXElement");
         for (const child of children) {
           const childCn = child.openingElement.attributes.find(a => a.name?.name === "className")?.value?.value || "";
@@ -221,7 +221,7 @@ const preferConcentricRadii = {
 const noHardcodedMagicNumbers = {
   meta: {
     type: "suggestion",
-    docs: { description: "Flag raw numeric values in inline styles — extract as design tokens" },
+    docs: { description: "Flag raw numeric values in inline styles ,  extract as design tokens" },
     messages: { magic: "Magic number {{value}} in inline style. Use CSS variable or Tailwind config token." },
   },
   create(ctx) {
@@ -249,7 +249,7 @@ const noHardcodedMagicNumbers = {
 const noDuplicateColors = {
   meta: {
     type: "suggestion",
-    docs: { description: "Flag repeated hex color values within the same file — centralize in Tailwind config" },
+    docs: { description: "Flag repeated hex color values within the same file ,  centralize in Tailwind config" },
     messages: { duplicate: "Hex {{hex}} appears multiple times. Define once in tailwind.config theme.colors." },
   },
   create(ctx) {
@@ -330,7 +330,7 @@ const noHScreen = {
 const noDefaultTailwindColors = {
   meta: {
     type: "suggestion",
-    docs: { description: "Flag use of default Tailwind color palette — should use custom theme colors" },
+    docs: { description: "Flag use of default Tailwind color palette ,  should use custom theme colors" },
     messages: { custom: "Default Tailwind color '{{color}}' used. Define custom palette in tailwind.config.ts." },
   },
   create(ctx) {

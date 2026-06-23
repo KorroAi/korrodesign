@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// KORRO STUDIO — Scaffold a Next.js 15 + Tailwind v4 + TypeScript project
+// KORRO STUDIO ,  Scaffold a Next.js 15 + Tailwind v4 + TypeScript project
 // Usage: node scaffold.js <project-dir>
 
 const { execSync } = require("node:child_process");
@@ -53,7 +53,7 @@ if (existsSync(pluginSource)) {
 // Write eslint.config.korro.js with korro-design plugin
 writeFileSync(
   join(projectDir, "eslint.config.korro.js"),
-  `// KORRO Design — Blind Spot: UI structural integrity linting (ESLint v10 flat config)
+  `// KORRO Design ,  Blind Spot: UI structural integrity linting (ESLint v10 flat config)
 // Run: npx eslint . --config eslint.config.korro.js
 // Auto-fix: npx eslint . --config eslint.config.korro.js --fix
 const korroDesign = require("./eslint-plugin-korro-design.js");
