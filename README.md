@@ -1,7 +1,7 @@
-# KORRO Design
+# Korrocorp Design
 
 <p align="center">
-  <img src="korrodesign.png" alt="KORRO Design" width="800">
+  <img src="korrodesign.png" alt="Korrocorp Design" width="800">
 </p>
 
 **Design Copilot for Claude Code. Two enforcement layers. Zero dependencies. Awwwards-level output.**
@@ -18,7 +18,7 @@
 
 ## About
 
-**KORRO Design** is built and maintained by **Korrocorp** under the [KorroAi](https://github.com/KorroAi) organization. It is a design enforcement system for AI-generated websites, not another code generator. While tools like v0, Bolt, and Lovable produce the same visual slop — purple gradients, Inter font, centered CTAs — KORRO Design enforces quality through two independent layers that no other tool has.
+**Korrocorp Design** is built and maintained by **Korrocorp** under the [Korrocorp](https://github.com/Korrocorp) organization. It is a design enforcement system for AI-generated websites, not another code generator. While tools like v0, Bolt, and Lovable produce the same visual slop — purple gradients, Inter font, centered CTAs — Korrocorp Design enforces quality through two independent layers that no other tool has.
 
 **What it does**: A Claude Code skill that transforms Claude into your Creative Director, guiding you through a 7-phase design process. A 14-rule ESLint plugin catches structural UI violations post-generation. Together they ensure every output is distinctive, maintainable, and production-ready.
 
@@ -37,7 +37,7 @@
 
 ```bash
 # Clone into Claude Code skills directory
-git clone https://github.com/KorroAi/korrodesign.git ~/.claude/skills/korrodesign
+git clone https://github.com/Korrocorp/korrodesign.git ~/.claude/skills/korrodesign
 
 # The skill activates when you invoke /korrodesign
 # Claude guides you through 7 phases from brief to final audit
@@ -52,7 +52,7 @@ npx eslint . --config eslint.config.korro.js
 
 ## How It Works
 
-KORRO Design operates through two independent enforcement layers:
+Korrocorp Design operates through two independent enforcement layers:
 
 ### Layer 1: Taste Guardian (during generation)
 
@@ -105,8 +105,8 @@ korrodesign/
 │   ├── scaffold.js                 # Next.js 15 project scaffold
 │   └── generate.js                 # Automated code generation (OpenRouter)
 └── demo/
-    ├── before.png                  # Before KORRO Design
-    ├── after.png                   # After KORRO Design
+    ├── before.png                  # Before Korrocorp Design
+    ├── after.png                   # After Korrocorp Design
     ├── 2-after-korrodesign.html    # HTML output example
     └── REDDIT_POST.md              # Launch post
 ```
@@ -177,18 +177,18 @@ The 500+ lines of SKILL.md rules are synthesized from:
 ### Before (Typical AI Output)
 
 <p align="center">
-  <img src="demo/before.png" alt="Without KORRO Design" width="800">
+  <img src="demo/before.png" alt="Without Korrocorp Design" width="800">
 </p>
 
 *Standard AI-generated website: purple gradient, Inter font, emoji CTAs, centered white text on colored background.*
 
-### After (KORRO Design Output)
+### After (Korrocorp Design Output)
 
 <p align="center">
-  <img src="demo/after.png" alt="With KORRO Design" width="800">
+  <img src="demo/after.png" alt="With Korrocorp Design" width="800">
 </p>
 
-*KORRO Design output: distinctive typography, intentional color palette, proper visual hierarchy, production-ready code.*
+*Korrocorp Design output: distinctive typography, intentional color palette, proper visual hierarchy, production-ready code.*
 
 ---
 
@@ -196,7 +196,7 @@ The 500+ lines of SKILL.md rules are synthesized from:
 
 **How is this different from v0, Bolt, or Lovable?**
 
-Those are AI code generators. KORRO Design is a design enforcement system. It does not just generate, it enforces quality through two independent layers. The Taste Guardian catches mistakes during generation. Blind Spot catches what slips through.
+Those are AI code generators. Korrocorp Design is a design enforcement system. It does not just generate, it enforces quality through two independent layers. The Taste Guardian catches mistakes during generation. Blind Spot catches what slips through.
 
 **Is Blind Spot subjective?**
 

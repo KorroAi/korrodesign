@@ -1,8 +1,8 @@
 {
   "name": "korro-studio",
   "version": "3.0.0",
-  "description": "KORRO Design ,  Design Copilot with Blind Spot ESLint plugin (12 AST-level UI structural integrity rules)",
-  "author": "KORRO",
+  "description": "Korrocorp Design ,  Design Copilot with Blind Spot ESLint plugin (12 AST-level UI structural integrity rules)",
+  "author": "Korrocorp",
   "license": "MIT",
   "dependencies": {
     "openai": "^4.73.0"

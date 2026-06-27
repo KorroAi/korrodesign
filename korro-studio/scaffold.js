@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// KORRO STUDIO ,  Scaffold a Next.js 15 + Tailwind v4 + TypeScript project
+// Korrocorp STUDIO ,  Scaffold a Next.js 15 + Tailwind v4 + TypeScript project
 // Usage: node scaffold.js <project-dir>
 
 const { execSync } = require("node:child_process");
@@ -17,7 +17,7 @@ if (existsSync(projectDir)) {
   process.exit(1);
 }
 
-console.log("[KORRO] Scaffolding Next.js 15 + Tailwind v4...");
+console.log("[Korrocorp] Scaffolding Next.js 15 + Tailwind v4...");
 
 execSync(
   `npx create-next-app@latest ${projectDir} --typescript --tailwind --eslint --app --src-dir --no-import-alias --turbopack`,
@@ -25,7 +25,7 @@ execSync(
 );
 
 // Install premium defaults
-console.log("[KORRO] Installing premium dependencies...");
+console.log("[Korrocorp] Installing premium dependencies...");
 const deps = [
   "framer-motion",
   "gsap",
@@ -47,13 +47,13 @@ const pluginDest = join(projectDir, "eslint-plugin-korro-design.js");
 if (existsSync(pluginSource)) {
   const { copyFileSync } = require("node:fs");
   copyFileSync(pluginSource, pluginDest);
-  console.log("[KORRO] Installed eslint-plugin-korro-design (Blind Spot)");
+  console.log("[Korrocorp] Installed eslint-plugin-korro-design (Blind Spot)");
 }
 
 // Write eslint.config.korro.js with korro-design plugin
 writeFileSync(
   join(projectDir, "eslint.config.korro.js"),
-  `// KORRO Design ,  Blind Spot: UI structural integrity linting (ESLint v10 flat config)
+  `// Korrocorp Design ,  Blind Spot: UI structural integrity linting (ESLint v10 flat config)
 // Run: npx eslint . --config eslint.config.korro.js
 // Auto-fix: npx eslint . --config eslint.config.korro.js --fix
 const korroDesign = require("./eslint-plugin-korro-design.js");
@@ -149,8 +149,8 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 `
 );
 
-console.log("[KORRO] Scaffold complete.");
-console.log(`[KORRO] Next steps:`);
+console.log("[Korrocorp] Scaffold complete.");
+console.log(`[Korrocorp] Next steps:`);
 console.log(`  1. Generate: node ../korro-studio/generate.js --prompt-file BRIEF_CURRENT.md --output-dir .`);
 console.log(`  2. Audit:    npx eslint . --config eslint.config.korro.js`);
 console.log(`  3. Auto-fix: npx eslint . --config eslint.config.korro.js --fix`);

@@ -2,12 +2,12 @@
 name: korrodesign
 description: Design Copilot with two enforcement layers (Taste Guardian + Blind Spot ESLint plugin, 14 rules). Works standalone with zero dependencies. 7-phase design pipeline. Produces Awwwards-level websites with automated UI hygiene enforcement.
 version: 3.0.0
-author: KORRO
+author: Korrocorp
 license: MIT
-repository: https://github.com/KorroAi/korrodesign
+repository: https://github.com/Korrocorp/korrodesign
 ---
 
-# KORRO Design: Design Copilot
+# Korrocorp Design: Design Copilot
 
 **Works standalone. Zero dependencies.** Just install the skill, Claude does the rest. Two enforcement layers no other design skill has. Optional OpenRouter backend for automated one-click generation.
 

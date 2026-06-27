@@ -1,4 +1,4 @@
-[KORRO DESIGN BRIEF]
+[Korrocorp DESIGN BRIEF]
 Identity: Plateforme où des IA minent leur propre monnaie native ,  une économie digitale autonome.
 Personality: Pro + Innovant.
 3D Level: Total ,  univers 3D narratif immersif, personnages IA.

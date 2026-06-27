@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// KORRO STUDIO ,  Project-level quality checker (COMPLEMENTARY to eslint-plugin-korro-design)
+// Korrocorp STUDIO ,  Project-level quality checker (COMPLEMENTARY to eslint-plugin-korro-design)
 // ESLint plugin handles per-file AST rules (14 rules). This handles cross-file structural checks:
 //   - tailwind.config.ts has custom palette
 //   - Grain component is imported in layout
@@ -117,7 +117,7 @@ function checkFile(filePath, content) {
   // Best-effort: search for noise/grain in app layout
 }
 
-console.log(`\n[KORRO] Quality checking ${projectDir}...\n`);
+console.log(`\n[Korrocorp] Quality checking ${projectDir}...\n`);
 
 // Check Tailwind config
 const twConfig =
@@ -151,12 +151,12 @@ for (const file of files) {
 }
 
 // Summary
-console.log(`\n[KORRO] Quality check complete.`);
+console.log(`\n[Korrocorp] Quality check complete.`);
 console.log(`  Violations: ${violations}`);
 console.log(`  Warnings:   ${warnings}`);
 
 if (violations === 0 && warnings === 0) {
-  console.log(`  Status:     \x1b[32mPASSED\x1b[0m ,  KORRO Studio rules satisfied.`);
+  console.log(`  Status:     \x1b[32mPASSED\x1b[0m ,  Korrocorp Studio rules satisfied.`);
 } else if (violations === 0) {
   console.log(`  Status:     \x1b[33mWARNINGS\x1b[0m ,  review warnings before deploy.`);
 } else {
