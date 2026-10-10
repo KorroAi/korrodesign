@@ -18,7 +18,7 @@
 
 ## About
 
-**Korrocorp Design** is built and maintained by **Korrocorp** under the [Korrocorp](https://github.com/KorroAi) organization. It is a design enforcement system for AI-generated websites, not another code generator. While tools like v0, Bolt, and Lovable produce the same visual slop — purple gradients, Inter font, centered CTAs — Korrocorp Design enforces quality through two independent layers that no other tool has.
+**Korrocorp Design** is built and maintained by **Korrocorp** ([korrocorp.com](https://korrocorp.com) · [GitHub](https://github.com/KorroAi)). It is a design enforcement system for AI-generated websites, not another code generator. While tools like v0, Bolt, and Lovable produce the same visual slop — purple gradients, Inter font, centered CTAs — Korrocorp Design enforces quality through two independent layers that no other tool has.
 
 **What it does**: A Claude Code skill that transforms Claude into your Creative Director, guiding you through a 7-phase design process. A 14-rule ESLint plugin catches structural UI violations post-generation. Together they ensure every output is distinctive, maintainable, and production-ready.
 
@@ -223,3 +223,10 @@ MIT — see [LICENSE](LICENSE)
 ---
 
 Built with the conviction that AI should generate distinctive, maintainable interfaces, not homogenized visual slop.
+
+---
+
+<p align="center">
+  <b>Built by <a href="https://korrocorp.com">Korrocorp</a></b> — games, apps and AI tools.<br>
+  <a href="https://korrocorp.com">korrocorp.com</a> · <a href="https://x.com/korrocorp">X @korrocorp</a> · <a href="https://discord.gg/RSBHHjxnYt">Discord</a> · <a href="https://github.com/KorroAi">GitHub</a>
+</p>
