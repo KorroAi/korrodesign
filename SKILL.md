@@ -4,7 +4,7 @@ description: Design Copilot with two enforcement layers (Taste Guardian + Blind 
 version: 3.0.0
 author: Korrocorp
 license: MIT
-repository: https://github.com/Korrocorp/korrodesign
+repository: https://github.com/KorroAi/korrodesign
 ---
 
 # Korrocorp Design: Design Copilot
